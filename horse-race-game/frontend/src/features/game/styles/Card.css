@@ -1,0 +1,63 @@
+﻿.card {
+  width: 80px;
+  height: 120px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-hidden {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 48px;
+}
+
+.card-empty {
+  background: #f0f0f0;
+  border: 2px dashed #ccc;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-value {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-suit {
+  font-size: 32px;
+}
+
+.card-oro {
+  border-color: #FFD700;
+  background: linear-gradient(to bottom, #ffffff, #FFF8DC);
+}
+
+.card-copa {
+  border-color: #4169E1;
+  background: linear-gradient(to bottom, #ffffff, #E6F2FF);
+}
+
+.card-espada {
+  border-color: #808080;
+  background: linear-gradient(to bottom, #ffffff, #F5F5F5);
+}
+
+.card-basto {
+  border-color: #8B4513;
+  background: linear-gradient(to bottom, #ffffff, #FFF5EE);
+}

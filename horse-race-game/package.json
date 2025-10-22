@@ -1,0 +1,25 @@
+﻿{
+  "name": "horse-race-game",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install:all": "yarn install",
+    "dev:backend": "yarn workspace backend dev",
+    "dev:frontend": "yarn workspace frontend dev",
+    "dev": "concurrently \"yarn dev:backend\" \"yarn dev:frontend\"",
+    "build:backend": "yarn workspace backend build",
+    "build:frontend": "yarn workspace frontend build",
+    "build": "yarn build:backend && yarn build:frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": "18.15.0"
+  }
+}
