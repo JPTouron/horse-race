@@ -9,10 +9,11 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    sourcemap: true,
-    rollupOptions: {
-      input: resolve(__dirname, 'public/index.html')
-    }
+    sourcemap: true
   },
-  publicDir: 'public'
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, './src')
+    }
+  }
 });
