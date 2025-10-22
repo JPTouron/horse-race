@@ -63,12 +63,12 @@ export const GameBoard: React.FC = () => {
 
         <div className="game-board">
           <div className="track">
-            {Array.from({ length: 9 }).map((_, index) => {
-              const position = 8 - index;
+            {Array.from({ length: 10 }).map((_, index) => {
+              const position = 9 - index;
               return (
                 <div key={position} className="track-row">
                   <div className="position-label">
-                    {position === 0 ? "Salida" : position}
+                    {position === 9 ? "Llegada" : position}
                   </div>
 
                   <div className="horses-lane">
@@ -79,7 +79,7 @@ export const GameBoard: React.FC = () => {
                     ))}
                   </div>
 
-                  {position > 0 && (
+                  {position <9 && (
                     <div className="square-card">
                       <Card
                         card={gameState.squares[position - 1]}
