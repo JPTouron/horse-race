@@ -8,6 +8,11 @@ const port = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
+// Add root route
+app.get('/', (req, res) => {
+  res.json({ message: 'Horse Race Game API' });
+});
+
 const gameRoutes = new GameRoutes();
 app.use('/api/game', gameRoutes.router);
 
