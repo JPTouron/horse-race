@@ -1,6 +1,6 @@
 ﻿.card {
-  width: 80px;
-  height: 120px;
+  width: 40px;
+  height: 65px;
   border: 2px solid #333;
   border-radius: 8px;
   display: flex;
@@ -9,6 +9,7 @@
   background: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
+  
 }
 
 .card:hover {
@@ -48,12 +49,12 @@
 }
 
 .card-copa {
-  border-color: #4169E1;
+  border-color: #055e39;
   background: linear-gradient(to bottom, #ffffff, #E6F2FF);
 }
 
 .card-espada {
-  border-color: #808080;
+  border-color: #4169E1;
   background: linear-gradient(to bottom, #ffffff, #F5F5F5);
 }
 

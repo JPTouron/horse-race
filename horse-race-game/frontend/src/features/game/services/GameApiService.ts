@@ -37,7 +37,8 @@ export class GameApiService {
     if (!response.ok) {
       throw new Error("Failed to draw card");
     }
-
+console.log("response", JSON.stringify (response));
+console.log("response", response);
     return response.json();
   }
 

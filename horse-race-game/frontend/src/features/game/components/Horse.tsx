@@ -12,9 +12,9 @@ export const Horse: React.FC<HorseProps> = ({ horse }) => {
       case Suit.ORO:
         return "#FFD700";
       case Suit.COPA:
-        return "#4169E1";
+        return "#027251ff";
       case Suit.ESPADA:
-        return "#808080";
+        return "#4169E1";
       case Suit.BASTO:
         return "#8B4513";
       default:
@@ -23,14 +23,13 @@ export const Horse: React.FC<HorseProps> = ({ horse }) => {
   };
 
   return (
-    <div 
-      className="horse" 
-      style={{ 
+    <div
+      className="horse"
+      style={{
         backgroundColor: getSuitColor(horse.suit),
         gridRow: 9 - horse.position
       }}
-    >
-      ðŸ´
+    >{horse.suit}
     </div>
   );
 };

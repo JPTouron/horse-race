@@ -13,28 +13,28 @@ export const Card: React.FC<CardProps> = ({ card, isHidden = false }) => {
   }
 
   if (isHidden) {
-    return <div className="card card-hidden">ðŸ‚ </div>;
+    return <div className="card card-hidden"></div>;
   }
 
   const getSuitSymbol = (suit: Suit): string => {
     switch (suit) {
       case Suit.ORO:
-        return "ðŸª™";
+        return "Oro";
       case Suit.COPA:
-        return "ðŸ†";
+        return "Copa";
       case Suit.ESPADA:
-        return "âš”ï¸";
+        return "Espada";
       case Suit.BASTO:
-        return "ðŸ";
+        return "Basto";
       default:
         return "";
     }
   };
 
   const getValueDisplay = (value: number): string => {
-    if (value === 10) return "S";
-    if (value === 11) return "C";
-    if (value === 12) return "R";
+    // if (value === 10) return "S";
+    // if (value === 11) return "C";
+    // if (value === 12) return "R";
     return value.toString();
   };
 

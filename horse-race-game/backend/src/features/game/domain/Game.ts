@@ -40,6 +40,7 @@ export class GameEntity {
     if (this.isGameOver) return;
 
     const card = this.deck.drawCard();
+    console.log("Drew card:", card);
     if (!card) return;
 
     this.currentCard = card;
