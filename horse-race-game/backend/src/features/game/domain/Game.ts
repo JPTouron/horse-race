@@ -1,5 +1,4 @@
 ﻿import { Card, GameState, Suit } from "../../../shared/types/game.types";
-import { CardEntity } from "./Card";
 import { DeckEntity } from "./Deck";
 import { HorseEntity } from "./Horse";
 
@@ -11,10 +10,12 @@ export class GameEntity {
   private isGameOver: boolean;
   private winner: Suit | null;
   private horseCards: Card[];
+  private drawn: Card[] = [];
 
   constructor() {
     this.horses = [];
     this.deck = new DeckEntity();
+    
     this.squares = [];
     this.currentCard = null;
     this.isGameOver = false;
@@ -39,11 +40,20 @@ export class GameEntity {
   drawNextCard(): void {
     if (this.isGameOver) return;
 
+
+    if (this.deck.isEmpty()) {
+      console.log("Deck is empty, regenerating from drawn cards");
+      // Regenerate deck from drawn cards
+      this.deck = new DeckEntity(this.drawn);
+      this.drawn = [];
+    }
+    
     const card = this.deck.drawCard();
     console.log("Drew card:", card);
     if (!card) return;
 
     this.currentCard = card;
+    this.drawn.push(card);
 
     const horse = this.horses.find(h => h.suit === card.suit);
     if (horse) {

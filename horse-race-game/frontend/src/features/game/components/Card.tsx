@@ -16,20 +16,7 @@ export const Card: React.FC<CardProps> = ({ card, isHidden = false }) => {
     return <div className="card card-hidden"></div>;
   }
 
-  const getSuitSymbol = (suit: Suit): string => {
-    switch (suit) {
-      case Suit.ORO:
-        return "Oro";
-      case Suit.COPA:
-        return "Copa";
-      case Suit.ESPADA:
-        return "Espada";
-      case Suit.BASTO:
-        return "Basto";
-      default:
-        return "";
-    }
-  };
+  
 
   const getValueDisplay = (value: number): string => {
     // if (value === 10) return "S";
@@ -39,10 +26,10 @@ export const Card: React.FC<CardProps> = ({ card, isHidden = false }) => {
   };
 
   return (
-    <div className={`card card-${card.suit.toLowerCase()}`}>
+    <div className={`card deck-card card-${card.suit.toLowerCase()}`}>
       <div className="card-content">
         <div className="card-value">{getValueDisplay(card.value)}</div>
-        <div className="card-suit">{getSuitSymbol(card.suit)}</div>
+        <div className="card-suit">{card.suit}</div>
       </div>
     </div>
   );

@@ -4,8 +4,12 @@ import { CardEntity } from "./Card";
 export class DeckEntity {
   private cards: Card[];
 
-  constructor() {
-    this.cards = this.createDeck();
+  constructor(initialCards?: Card[]) {
+    if (initialCards) {
+      this.cards = [...initialCards];
+    } else {
+      this.cards = this.createDeck();
+    }
     this.shuffle();
   }
 
@@ -24,7 +28,7 @@ export class DeckEntity {
     ];
 
     const deck: Card[] = [];
-    
+
     for (const suit of suits) {
       for (const value of values) {
         deck.push(new CardEntity(suit, value));
@@ -42,7 +46,8 @@ export class DeckEntity {
   }
 
   drawCard(): Card | null {
-    return this.cards.pop() || null;
+     return this.cards.length > 0 ? this.cards.pop()! : null;
+  
   }
 
   getCards(): Card[] {

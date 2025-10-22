@@ -11,7 +11,11 @@
   transition: transform 0.2s;
   
 }
-
+.deck-card{
+  width: 80px;
+  height: 120px;
+  
+}
 .card:hover {
   transform: scale(1.05);
 }
@@ -35,7 +39,7 @@
 }
 
 .card-value {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
 }
 

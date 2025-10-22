@@ -1,8 +1,8 @@
 ﻿export enum Suit {
-  ORO = "ORO",
-  BASTO = "BASTO",
-  ESPADA = "ESPADA",
-  COPA = "COPA"
+  ORO = "🪙",
+  BASTO = "🩼",
+  ESPADA = "⚔️",
+  COPA = "🍷"
 }
 
 export enum CardValue {
