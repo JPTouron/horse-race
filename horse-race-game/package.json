@@ -15,6 +15,7 @@
     "build:backend": "yarn workspace backend build",
     "build:frontend": "yarn workspace frontend build",
     "build": "yarn build:backend && yarn build:frontend",
+    "startbackend": "cd backend/dist && yarn start",
     "clean:all": "rimraf node_modules frontend/node_modules backend/node_modules frontend/dist backend/dist"
   
   },
