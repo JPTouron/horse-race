@@ -2,7 +2,7 @@
 import { GameController } from "./GameController";
 
 export class GameRoutes {
-  private router: Router;
+  public router: Router;
   private gameController: GameController;
 
   constructor() {
