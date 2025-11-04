@@ -1,6 +1,6 @@
 ﻿import { GameState } from "../../../shared/types/game.types";
 
-const API_BASE_URL = "http://localhost:3001/api/game";
+const API_BASE_URL =`${import.meta.env.VITE_API_URL}/api/game`;
 
 export class GameApiService {
   async createGame(gameId: string): Promise<GameState> {
